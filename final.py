@@ -246,7 +246,7 @@ folium.Marker([df_좌표_2['위도'][len(df_좌표_2)-1], df_좌표_2['경도'][
 
 # 경로 마커 추가
 for i in range(1, len(df_좌표_2)-1):
-    if df_좌표_2['위험도'][i] < 0.3:
+    if df_좌표_2['위험도'][i] < 0.4:
         color = 'blue'
         tooltip = '안전'
         icon='ok-sign'
@@ -264,7 +264,7 @@ for i in range(1, len(df_좌표_2)-1):
 
 # 선 그리기
 for i in range(len(df_좌표_2)-1):
-    if (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 < 0.3:
+    if (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 < 0.4:
         color='blue'
     elif (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 > 0.85:
         color='red'
