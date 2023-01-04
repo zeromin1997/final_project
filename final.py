@@ -188,7 +188,7 @@ for i in range(len(경도d)):
 
 경도 = []
 위도 = []
-for i in range(0, len(경도d), round(len(경도d)/20)):
+for i in range(0, len(경도d), round(len(경도d)/30)):
     경도.append(경도d[i])
     위도.append(위도d[i])
 df_좌표_2 = pd.DataFrame({'경도' : 경도, '위도' : 위도})
@@ -246,7 +246,7 @@ folium.Marker([df_좌표_2['위도'][len(df_좌표_2)-1], df_좌표_2['경도'][
 
 # 경로 마커 추가
 for i in range(1, len(df_좌표_2)-1):
-    if df_좌표_2['위험도'][i] < 0.5:
+    if df_좌표_2['위험도'][i] < 0.3:
         color = 'blue'
         tooltip = '안전'
         icon='ok-sign'
@@ -264,7 +264,7 @@ for i in range(1, len(df_좌표_2)-1):
 
 # 선 그리기
 for i in range(len(df_좌표_2)-1):
-    if (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 < 0.5:
+    if (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 < 0.3:
         color='blue'
     elif (df_좌표_2['위험도'][i] + df_좌표_2['위험도'][i+1])/2 > 0.85:
         color='red'
