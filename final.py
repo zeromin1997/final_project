@@ -2,21 +2,13 @@
 import streamlit as st
 import folium
 from streamlit_folium import folium_static
-from folium import plugins
 import json
-import time
 import pandas as pd 
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import koreanize_matplotlib
-import plotly.express as px
-import geojson
 import requests
 from tensorflow.python.keras.models import load_model
 from PIL import Image
 import io
-import PIL.Image as pil
 import cv2
 
 st.set_page_config(
