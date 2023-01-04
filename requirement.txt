@@ -1,0 +1,11 @@
+streamlit
+folium
+folium_static
+json
+pandas
+numpy
+requests
+load_model
+Image
+io
+cv2
