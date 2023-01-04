@@ -209,7 +209,7 @@ for i in range(len(img_list)):
 
 sample_list = np.array(sample_list)
 
-model = load_model('C:/Users/dudal/Desktop/project/final_project/traffic_image_predict_model')
+model = load_model('traffic_image_predict_model')
 pred = model.predict(sample_list)
 center = location_data_d[round(len(df_좌표_2)/2)]
 
